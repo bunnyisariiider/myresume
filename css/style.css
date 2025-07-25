@@ -31,12 +31,13 @@ body {
 
 /* 섹션 공통 스타일 */
 section {
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
 }
 
 /* 네비게이션 */
 .navbar {
-    background: var(--white);
+    /* background: var(--white); */
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 20px var(--shadow);
     position: fixed;    /* 스크롤해도 상단에 고정 */
     top: 0;
@@ -61,7 +62,14 @@ section {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: white;
+}
+
+.nav-logo img {
+    height: 70px; /* 원하는 크기로 조절 */
+    width: auto;
+    object-fit: contain;
+    color: white;
 }
 
 .nav-logo span:first-child {
@@ -83,7 +91,7 @@ section {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;   /* ::after 가상 요소를 위한 포지셔닝  */
@@ -114,22 +122,15 @@ section {
     /* 대각선 그라디언트 배경 */
     /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
     color: white;
-    padding: 8rem 0 5rem;
-    margin-top: 70px;
-    min-height: 90vh;   /* 뷰포트 높이의 90% */
+    padding: 6rem 0 0 ;
+    /* margin-top: 70px; */
+    min-height: 80vh;   /* 뷰포트 높이의 90% */
     display: flex;
-    align-items: center;
+    position : relative;
+    
 }
 
-.hero-container {
-    
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    width: 100%;
-    height: 90vh; /* 화면 전체 높이 */
-    overflow: hidden;
-}
+
 
 .hero-main video {
     width: 100%;
@@ -139,14 +140,29 @@ section {
     top: 0;
     left: 0;
     z-index: -1; /* 텍스트보다 아래로 배치 */
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-.hero-cotent {
+.hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;  /* 두 개의 동일한 너비 열 */
     gap: 4rem;
     align-items: center;
+    
+    
+}
+
+.hero-container {
+    
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    width: 100%;
+    height : 100%;
+    /* height: 90vh; 화면 전체 높이 */
+    overflow: hidden;
+    align-items: center;
+    
 }
 
 .hero-title {
@@ -237,7 +253,7 @@ section {
 
 }
 
-.socil-btn:hover {
+.social-btn:hover {
     background: white;
     color: var(--primary-color);
     transform: translateY(-3px);
@@ -265,4 +281,8 @@ section {
 .profile-image:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.about {
+    margin: 8rem;
 }
